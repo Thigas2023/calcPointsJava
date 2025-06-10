@@ -20,7 +20,7 @@ Um sistema Java para análise e classificação de pontos em um plano cartesiano
 
 **Principais métodos:**
 - `distanceTo(Point other)` - Calcula distância euclidiana
-- `isAtOrigin()` - Verifica se está na origem (0,0)
+- `isAtOrigin(Point origin)` - Verifica se está na origem definida
 - `isOnAxis(Point origin)` - Verifica se está sobre um eixo
 - `getQuadrant(Point origin)` - Determina o quadrante (1-4, ou 0 se sobre eixo)
 
