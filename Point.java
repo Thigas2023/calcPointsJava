@@ -19,8 +19,8 @@ public class Point {
         return Math.sqrt(Math.pow(this.x - other.x, 2) + Math.pow(this.y - other.y, 2));
     }
     
-    public boolean isAtOrigin() {
-        return x == 0 && y == 0;
+    public boolean isAtOrigin(Point origin) {
+        return x == origin.x && y == origin.y;
     }
     
     public boolean isOnAxis(Point origin) {
