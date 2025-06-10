@@ -16,7 +16,7 @@ public class InputHandler {
             double y = scanner.nextDouble();
             return new Point(x, y);
         } catch (InputMismatchException e) {
-            scanner.nextLine(); // Clear invalid input
+            scanner.nextLine(); 
             throw new InvalidInputException("Coordenadas da origem devem ser números válidos");
         }
     }
@@ -30,7 +30,7 @@ public class InputHandler {
             }
             return points;
         } catch (InputMismatchException e) {
-            scanner.nextLine(); // Clear invalid input
+            scanner.nextLine(); 
             throw new InvalidInputException("Número de pontos deve ser um número inteiro válido");
         }
     }
@@ -43,14 +43,14 @@ public class InputHandler {
             System.out.print("Digite o y do ponto: ");
             double y = scanner.nextDouble();
             
-            // Validate if coordinates are finite numbers
+            // Valida se as coordenadas são pontos finitos
             if (!Double.isFinite(x) || !Double.isFinite(y)) {
                 throw new InvalidInputException("Coordenadas devem ser números finitos");
             }
             
             return new Point(x, y);
         } catch (InputMismatchException e) {
-            scanner.nextLine(); // Clear invalid input
+            scanner.nextLine();
             throw new InvalidInputException("Coordenadas do ponto devem ser números válidos");
         }
     }
