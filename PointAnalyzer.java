@@ -57,7 +57,7 @@ public class PointAnalyzer {
     }
     
     private String classifyPoint(Point point) {
-        if (point.isAtOrigin()) {
+        if (point.isAtOrigin(origin)) {
             return String.format("O ponto %s está na origem", point);
         }
         
