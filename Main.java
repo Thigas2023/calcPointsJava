@@ -4,14 +4,14 @@ public class Main {
         PointAnalyzer analyzer = null;
         
         try {
-            // Block 1: Initialize system (origin and point count)
+            // Block 1: Inicializa o sistema
             Point origin = inputHandler.getOrigin();
             int numberOfPoints = inputHandler.getNumberOfPoints();
             
             analyzer = new PointAnalyzer(origin);
-            System.out.println(); // Empty line for readability
+            System.out.println(); 
             
-            // Block 2: Process each point with individual error handling
+            // Block 2: Processa cada ponto
             for (int i = 0; i < numberOfPoints; i++) {
                 try {
                     Point point = inputHandler.getPoint(i);
@@ -26,7 +26,7 @@ public class Main {
                     ResultsDisplay.displayPointError(i + 1, new Exception("Erro inesperado", e));
                 }
                 
-                System.out.println(); // Empty line between points
+                System.out.println();
             }
             
         } catch (InvalidInputException e) {
@@ -40,7 +40,7 @@ public class Main {
             return;
         }
         
-        // Block 3: Display results (only if analyzer was created)
+        // Block 3: Mostra os resultados
         try {
             if (analyzer != null) {
                 ResultsDisplay.displayFinalResults(analyzer);
@@ -49,7 +49,6 @@ public class Main {
             ResultsDisplay.displayError("exibição de resultados", e);
         }
         
-        // Block 4: Cleanup resources
         try {
             inputHandler.close();
         } catch (Exception e) {
